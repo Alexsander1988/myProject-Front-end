@@ -22,7 +22,7 @@ var gulp          = require('gulp'),              //Установка  gulp
 //Компилятор less приобразовывает в css
 
 gulp.task('less', function(){   //Плагин less для компиляции  css  файлов      
-	 gulp.src(['app/less/**/*.less', '!app/less/libs/sprite.less', '!app/less/libs/Animate.less', '!app/less/libs/libs.less']) //Путь к файлу  style.less каторый будет обрабатыватся в stle.css
+	 gulp.src(['app/less/**/*.less', '!app/less/libs/sprite.less', '!app/less/libs/Animate.less', '!app/less/libs/libs.less', '!app/less/libs/font-awesome.less', '!app/less/libs/font-awesomeless.less']) //Путь к файлу  style.less каторый будет обрабатыватся в stle.css
     .pipe(plumber()) 
 		.pipe(less())
     .on("error", notify.onError(function(error) {  //Обработчик ощибок в Less компиляторе
